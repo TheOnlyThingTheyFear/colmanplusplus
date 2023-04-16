@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>colman++</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="script.js"></script>
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.png">
+</head>
+<body>
+    <div class="container"><h2>m1/m2 מדריכים למאק</h2></div>
+    <div class="container" id="parallels"><h3>Prallels Desktop 18.1</h3></div>
+    <div class="container"><p>לקורס מערכות הפעלה נצטרך לינוקס על המחשב, עם התוכנה הזאת הכי קל להריץ אותו ואפשר גם להריץ וינדוס למי שרוצה, התוכנה הזאת עולה כסף אבל ההסבר יראה איך עוקפים את זה</p>
+        <div class="manual-parallels">
+            <h4>שלב ראשון: נתקין את התוכנה</h4>
+            <p>.נוריד את התוכנה מהלינק <a href="https://download.parallels.com/desktop/v18/18.1.1-53328/ParallelsDesktop-18.1.1-53328.dmg">הזה</a></p>
+            <p>install נלחץ על</p>
+            <img src="install.png" alt="">
+            <p>בשלב הזה נתבקש להתקין גרסה עדכנית יותר, אנחנו מסרבים בכל שלב</p>
+            <img src="update-rquest.png" alt="">
+            <p>הוא יבקש שוב להוריד גרסה עדכנית, מסרבים שוב</p>
+            <img src="update-request-2.png" alt="" style="width: 85%;">
+            <p>גם אחרי שנסיים את כל התהליך, כל פעם שנפתח את התוכנה הוא יבקש לעדכן אותה, בכל פעם נסרב לעדכן</p>
+            <p>אחרי שסירבנו לעדכן את התוכנה, נקבל הצעה להתקנת וינדוס, נדלג עליה</p>
+            <p>(מניסיון אישי, וינדוס על מאקים חדשים לא עובד טוב)</p>
+            <img src="install-windows-request.png" alt="">
+            <h4>Ubuntu linux :שלב שני</h4>
+            <p>אחרי שסיימנו להתקין את התוכנה, נלחץ על אובונטו לינוקס בצד שמאל למטה ואחר כך על המשך</p>
+            <img src="ubuntu-install.png" alt="">
+            <p>נלחץ הורדה</p>
+            <img src="ubuntu-download.png" alt="">
+            <p>אחרי שאובונטו ירד, יפת מסך כניסה למשתמש</p>
+            <h3>לא לנסות להתחבר או להירשם</h3>
+            <h4>שלב 3: הכנה</h4>
+            <p>יש כמה דברים שנצטרך לסדר לפני שנוכל להפעיל את התוכנה</p>
+            <p>הדבר הראשון שנצטרך לעשות הוא לתת לטרמינ שלנו גישה מלאה לקבצים במחשב, מבצעים את זה מההגדרות במאק, נלך להגדרות->אבטחה ופרטיות->גישה מלאה לדיסק->נפעיל את המתג ליד הטרמיל</p>
+            <img src="privacy-screen.png" alt="">
+            <p>ונפעיל את הגישה לטרמינל</p>
+            <img src="terminal-full-disk-access.png" alt="">
+            <p>הדבר השני שנצטרך לעשות הוא להתקין את עורך הקוד של אפל, אנחנו צריכים אותו כי יש בו חבילות חשובות שמאפשרות למאק להריץ קוד בטרמינל, נוכל להתקין אותו בעזרת הפקודה הבאה בטרמינל(חלון טרמינל חדש)</p>
+            <p style="font-size: 20px;">xcode-select --install</p>
+            <img src="Xcode_icon.png" alt="" style="width: 15%;">
+            <p>למי שכבר יש את התוכנה על המחשב יקבל את ההודעה הבאה</p>
+            <img src="xcode_installed.png" alt="" style="width: 85%;">
+            <h4>שלב 4: הפעלה</h4>
+            <p>לפני שמתחילים נוודא שהתוכנה פועלת ברקע, נוכל לדעת שכן אם יופיע לנו האייקון שלה בשורת המצב</p>
+            <img src="status.png" alt="" style="width: 85%;">
+            <p>אם היא לא פועלת נפעיל אותה מחלון האפליקציות שלנו, היא ניראת ככה</p>
+            <img src="parallels-logo.png" alt="" style="width: 15%;">
+            <p>נוריד את הקבצים לצורך ההפעלה מהקישור <a href="https://github.com/dreamncn/ParallelsDesktopCrack/archive/refs/heads/main.zip">הזה</a></p>
+            <p>נלך לתיקית ההורדות שלנו ונזהה את התיקיה שהורדנו, נלחץ עליה במקש ימני במעכבר ונבחר </p>
+            <p style="font-size: 15px;">new terminal at folder</p>
+            <p>נשים לב שנפתח לנו חלון טרמינל מוכן להפעלת פקודות על התיקיה שבחרנו קודם, עכשיו נריץ את הקוד הבא</p>
+            <p style="font-size: 20px;">chmod +x ./install.sh && sudo ./install.sh</p>
+            <p>שהתקנו את אובונטו נפתח לנו מסך שחור, עכשיו אפשר ללחוץ עליו ולהפעיל את המערכת</p>
+            <img src="ubuntu-start.png" alt="" style="width: 80%;">
+            <p>אחרי שהמערכת עלתה נלחץ על הכפתור</p>
+            <img src="ubuntu-login.png" alt="" style="width: 85%;">
+            <p>בלשב זה אנחנו צריכים לקבוע סיסמה חדשה למערכת ההפעלה שלנו,נתבקש לכתוב אותה פעמיים,יש לשים לב להקפיד על מספר תווים מספק</p>
+            <img src="ubuntu-set-password.png" alt="" style="width: 50%;">
+            <p>אחרי שהתחברנו למערכת ההפעלה שלנו, נתבקש להתקין חבילת קבצים הכרחית, נרשום את הסיסמה שהרגע בחרנו ונתקדם</p>
+            <img src="ubuntu-kit-password.png" alt="" style="width: 80%;">
+            <p>נמתין לסיום ההתקנה</p>
+            <img src="ubuntu-kit.png" alt="" style="width: 80%;">
+            <p>אחרכך נלחץ על הפעלה מחדש</p>
+            <img src="ubuntu-restart.png" alt="" style="width: 80%;">
+            <p>נתחבר שוב למערכת שלנו ונתקדם עם המסך מימין למעלה</p>
+            <img src="ubuntu-next.png" alt="" style="width: 80%;">
+            <p>🎉וסיימנו</p>
+        </div>
+</html>
