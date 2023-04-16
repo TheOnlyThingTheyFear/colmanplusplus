@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="style.css">
+    </head>
+<body>
+<div class="container" id="database"><h3>Azure sql server + Azure data studio</h3></div>
+    <div class="container">
+        <p>הכלים שהפקולטה מבקשת לעבוד איתם במערכות בסיסי נתונים הם כלים שעובדים רק על וינדוס, הבעיה היא שגם אם נתקין וינדוס למאק כמו שהראתי במדריך למערכות הפעלה, התוכנות עדיין לא יעבדו. בשביל זה נשתמש בכלים חלופיים שמייקרוסופט נותנת ואני מקווה שהם יתנו מענה מלא לכל מה שנעשה השנה, אעדכן את המדריך לאורך הסמסטר בעת הצורך כמובן</p>
+        <h3 style="text-decoration: underline;">Docker</h3>
+        <p>כדי להריץ את השרת על המאק שלנו נצטרך להוריד תוכנה שיכולה לפתוח מכונה וירטואלית קטנה במיוחד בשביל השרת שלנו</p>
+        <p>Docker קוראים לתוכנה</p>
+        <p><a href="https://desktop.docker.com/mac/main/arm64/Docker.dmg?utm_source=docker&utm_medium=webreferral&utm_campaign=dd-smartbutton&utm_location=module">להורדה</a></p>
+        <p>עד שההורדה תסתיים נירשם לאתר <a href="https://hub.docker.com/signup">פה</a></p>
+        <img src="docker-home.png" alt="">
+        
+        <p>השלב הבא הוא להוריד את קובץ ההתקנה של השרת שלנו, נעשה את זה דרך הטרמינל שלנו עם הפקודה הבאה</p>
+        <h3>docker pull mcr.microsoft.com/azure-sql-edge</h3>
+        <p>אחרי שהורדנו את קובץ ההתקנה, נתקין אותו עם הפקודה הבאה</p>
+        <h3>docker run -e "ACCEPT_EULA=1" -e "MSSQL_SA_PASSWORD=MyPassword123#" -e "MSSQL_PID=Developer" -e "MSSQL_USER=SA" -p 1433:1433 -d --name=sql mcr.microsoft.com/azure-sql-edge</h3>
+        <p>לא לנסות ולהחליף אותה MyPassword123# הסיסמה לשרת שלנו היא</p>
+        <h3 style="text-decoration: underline; padding: 50px;">Azure Data Studio</h3>
+        <p>אחרי שהשרת שלנו פועל אנחנו צריכים דרך לגשת אליו ולערוך אותו</p>
+        <p>נוריד את התוכנה מהקישור <a href="https://go.microsoft.com/fwlink/?linkid=2230773">הזה</a></p>
+        <p>אחרי שהורדנו את התוכנה נצטרך לגרור אותה צורה ידנית מתיקית ההורדות שלנו לתיקית האפליקציות</p>
+        <img src="studio-to-apps.png" alt="">
+        <p>נפתח את התוכנה ונלחץ על חיבור חדש</p>
+        <img src="studio-new-connection.png" alt="">
+        <p>נרשום את הפרטים הבאים במדויק לפי התמונה הבאה כולל אותיות גדולות, לא לשכוח את הסיסמה שהגדרנו קודם</p>
+        <img src="studio-connection-details.png" alt="">
+        <p>בסיס הנתונים אמור להופיע מולכם</p>
+        <p>🎉וסיימנו</p>
+    </div>
+    </body>
+</html>
